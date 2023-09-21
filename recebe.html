@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Inscrever</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link href="https://fonts.cdnfonts.com/css/berlin-sans-fb-demi" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/arial-geo" rel="stylesheet">
+                
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #7845df;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        @import url('https://fonts.cdnfonts.com/css/berlin-sans-fb-demi');
+        @import url('https://fonts.cdnfonts.com/css/arial-geo');
+       
+        input {
+            color: #333; 
+            font-family: 'Arial GEO', sans-serif;
+        }
+
+        p {
+            color: #333; 
+            font-family: 'Arial GEO', sans-serif;
+        }
+
+        .label1 {
+            color: #333; 
+            font-family: 'Arial Th', sans-serif;
+        }
+        
+        .inscreva-se-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #7845df;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .inscreva-se-button:hover {
+            background-color: #7845df;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <header>
+            <h1> Inscrição feita com sucesso ;) </h1> 
+        </header>
+        <br/>
+        <br><br><br><br><br>
+        <p id="nome"></p>
+        <p id="cpf"></p>
+        <p id="nascimento"></p>
+        <p id="sexo"></p>
+        <p id="pagamento"></p>
+
+        <script>
+           
+            const urlParams = new URLSearchParams(window.location.search);
+            const nome = urlParams.get('nome');
+            const cpf = urlParams.get('cpf');
+            const nascimento = urlParams.get('nascimento');
+            const sexo = urlParams.get('sexo');
+            const pagamento = urlParams.get('pagamento');
+    
+    
+            document.getElementById('nome').textContent = `Nome: ${nome}`;
+            document.getElementById('cpf').textContent = `CPF: ${cpf}`;
+            document.getElementById('nascimento').textContent = `Data de nascimento: ${nascimento}`;
+            document.getElementById('sexo').textContent = `Sexo: ${sexo}`;
+            document.getElementById('pagamento').textContent = `Pagamento: ${pagamento}`;
+        </script>
+
+       
+
+    </center>
+    
+</body>
+</html>
